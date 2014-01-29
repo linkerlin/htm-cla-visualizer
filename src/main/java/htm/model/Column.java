@@ -507,7 +507,6 @@ public class Column extends BaseSpace.Element {
           if (segment.isSequenceSegment() && !segment.segmentActive(Cell.NOW, Cell.State.LEARN)) {
             return;
           }
-          //cell.setPredictiveState(true);
           cell.setPredictInStepState(segment.predictedInStep());
           if (region.getTemporalLearning()) {
             DistalDendriteSegment.Update activeUpdate = cell.getSegmentActiveSynapses(segment, Cell.NOW, false);
